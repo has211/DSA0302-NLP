@@ -1,0 +1,15 @@
+import nltk
+from nltk import pos_tag, word_tokenize
+
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+
+text = "The boys are playing football in the playground."
+
+words = word_tokenize(text)
+
+tags = pos_tag(words)
+
+print("Morphological Analysis:")
+for word, tag in tags:
+    print(word, ":", tag)
